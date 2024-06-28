@@ -6,12 +6,11 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:55:26 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/28 10:43:16 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:41:07 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_nbrlen(int n)
 {
