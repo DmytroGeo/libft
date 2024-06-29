@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:29:15 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/26 15:34:28 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/06/29 09:41:31 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	n = 0;
 	while (s[n])
 	{
-		ft_putchar_fd(s[n], fd)
+		ft_putchar_fd(s[n], fd);
 		n++;
 	}
 }

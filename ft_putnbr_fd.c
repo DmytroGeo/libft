@@ -6,16 +6,16 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:44:07 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/27 10:39:09 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/06/29 09:07:56 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
-	
+
 	c = n + 48;
 	ft_putchar_fd(c, fd);
 }
