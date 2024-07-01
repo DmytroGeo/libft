@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:08:52 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/27 18:36:58 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:55:16 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,19 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
+/*
+char	ft_toupper2(unsigned int i, char c)
+{
+	return(c + (i * i));
+}
+
+*/
+
+void	ft_toupper3(unsigned int i, char *c)
+{
+	*c = *c + i;
+}
+	
 int	main(void)
 {
 //	char dst1[100]="hello";
@@ -101,6 +114,7 @@ int	main(void)
 */
 
 //	another calloc test:
+//	char	*k;
 /*	while (i < nmemb)
 	{
 		printf("%d, ", ptr[i]);
@@ -130,6 +144,16 @@ int	main(void)
 	printf("%s \n", brray);
 */
 //	for ft_itoa:
-	printf("%s", ft_itoa(0));
+//	printf("%s", ft_itoa(0));
+
+
+/*
+	char const s[6]="hello";
+	printf("%s \n", ft_strmapi(s, ft_toupper2));
+*/
+
+	char array[7] = "hello";
+	ft_striteri(array, ft_toupper3);
+	printf("%s", array);
 	return(0);
 }
