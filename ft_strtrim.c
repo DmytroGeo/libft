@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 10:26:49 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/05 13:51:01 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:55:15 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr = ft_memcpy(ptr, s1 + y, x - y + 1);
 	ptr[x - y + 1] = '\0';
 	return (ptr);
-
 }

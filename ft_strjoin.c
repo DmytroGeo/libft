@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 19:35:42 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/05 13:48:58 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:54:48 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	n;
 	size_t	len1;
 	size_t	len2;
-
 
 	n = 0;
 	len1 = ft_strlen(s1);
