@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:48:55 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/03 10:38:19 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/05 16:21:55 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_list
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
