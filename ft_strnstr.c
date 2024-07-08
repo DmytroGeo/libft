@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 11:49:18 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/29 10:01:22 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:07:50 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	k = 0;
 	b = (char *)big;
 	l = (char *)little;
-	if (ft_strlen(little) == 0)
-		return (b);
+	if (!*b || !b)
+	{
+		if (!*l || !l)
+			return (b);
+		return (NULL);
+	}
 	else
 	{
-		while (k < len)
+		while (len - k >= ft_strlen(l))
 		{
 			if (ft_strncmp(b + k, l, ft_strlen(l)) == 0)
 				return (b + k);
