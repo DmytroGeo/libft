@@ -6,7 +6,7 @@
 #    By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/04 16:44:12 by dgeorgiy          #+#    #+#              #
-#    Updated: 2024/07/05 13:25:24 by dgeorgiy         ###   ########.fr        #
+#    Updated: 2024/07/08 15:45:20 by dgeorgiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,8 @@ SRC = ft_atoi \
 		ft_calloc \
 		ft_isalnum \
 		ft_isalpha \
-		ft_isascii \
 		ft_isdigit \
+		ft_isascii \
 		ft_isprint \
 		ft_itoa \
 		ft_memchr \
@@ -49,8 +49,21 @@ SRC = ft_atoi \
 		ft_tolower \
 		ft_toupper
 
+BSRC = ft_lstnew \
+		ft_lstadd_front \
+		ft_lstsize \
+		ft_lstlast \
+		ft_lstadd_back \
+		ft_lstdelone \
+		ft_lstclear \
+		ft_lstiter \
+		ft_lstmap
+
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))
+
+BSRCS = $(addsuffix .c, $(BSRC))
+BOBJS = $(addsuffix .o, $(BSRC))
 
 .c.o:
 	@$(CC) $(CFLAGS) -c -o $@ $<
@@ -60,6 +73,9 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(OBJS) $(BOBJS)
+		$(AR) $(NAME) $^
+
 clean: 
 	@rm -f *.o
 
@@ -68,4 +84,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all fclean clean re
+.PHONY: all fclean clean bonus re
