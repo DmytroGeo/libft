@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 14:09:40 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/28 10:30:45 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 10:03:23 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_intconvert(const char *nptr)
 	int		n;
 	size_t	k;
 
+	n = 0;
 	k = 0;
 	while (ft_isdigit(nptr[k]))
 	{
@@ -38,15 +39,13 @@ int	ft_atoi(const char *nptr)
 	int		n;
 
 	n = 0;
-	while (nptr[n])
-	{
-		if (ft_isspace(nptr[n]))
-			n++;
-		else if (nptr[n] == '-')
-			return (-1 * ft_intconvert(nptr + n + 1));
-		else if (ft_isdigit(nptr[n]))
-			return (ft_intconvert(nptr + n));
-		return (0);
-	}
-	return (n);
+	while (ft_isspace(nptr[n]))
+		n++;
+	if (nptr[n] == '-')
+		return (-1 * ft_intconvert(nptr + n + 1));
+	else if (nptr[n] == '+')
+		n++;
+	if (ft_isdigit(nptr[n]))
+		return (ft_intconvert(nptr + n));
+	return (0);
 }

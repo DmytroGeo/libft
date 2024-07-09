@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:55:26 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/28 15:41:07 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:08:14 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ size_t	ft_nbrlen(int n)
 	return (len);
 }
 
-char	*ft_charconvert(char *ptr, int n, size_t sign, size_t len)
+char	*ft_charconvert(char *ptr, unsigned int i, size_t sign, size_t len)
 {
 	ptr[len + sign] = '\0';
-	while (len + sign != sign)
+	while (len != 0)
 	{
 		len--;
-		ptr[len + sign] = (n % 10) + 48;
-		n = n / 10;
+		ptr[len + sign] = (i % 10) + 48;
+		i = i / 10;
 	}
 	if (sign == 1)
 		ptr[0] = '-';
@@ -60,18 +60,22 @@ size_t	ft_sign(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*ptr;
-	size_t	len;
-	size_t	sign;
-	int		i;
+	char			*ptr;
+	size_t			len;
+	size_t			sign;
+	unsigned int	i;
 
+	i = 0;
 	sign = ft_sign(n);
 	len = ft_nbrlen(n);
-	i = ((-2) * sign + 1);
-	ptr = (char *)malloc((len + 1 + sign) * sizeof(char));
+	ptr = malloc((len + 1 + sign) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	if (n == INT_MIN)
-		return ("-2147483648");
-	return (ft_charconvert(ptr, i * n, sign, len));
+	if (n > 0)
+		i = (unsigned int)n;
+	else if (n < 0 && n > INT_MIN)
+		i = (unsigned int)((-1) * n);
+	else if (n == INT_MIN)
+		i = (unsigned int)(INT_MAX) + 1;
+	return (ft_charconvert(ptr, i, sign, len));
 }
