@@ -6,12 +6,12 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:44:07 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/09 11:41:07 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 12:08:06 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 size_t	ft_nbrlen(int n)
 {
 	size_t	len;
@@ -31,13 +31,13 @@ size_t	ft_nbrlen(int n)
 		return (ft_nbrlen((-1) * n));
 	else if (n == INT_MIN)
 		return (10);
-	else
-		return (0);
 	return (len);
 }
 
-char	*ft_charconvert(char *ptr, unsigned int i, size_t sign, size_t len)
+char	*ft_charconvert(unsigned int i, size_t sign, size_t len)
 {
+	char	ptr[12] = "";
+
 	ptr[len + sign] = '\0';
 	while (len != 0)
 	{
@@ -60,7 +60,6 @@ size_t	ft_sign(int n)
 
 char	*ft_itoa2(int n)
 {
-	char			ptr[12];
 	size_t			len;
 	size_t			sign;
 	unsigned int	i;
@@ -74,15 +73,15 @@ char	*ft_itoa2(int n)
 		i = (unsigned int)((-1) * n);
 	else if (n == INT_MIN)
 		i = (unsigned int)(INT_MAX) + 1;
-	return (ft_charconvert(ptr, i, sign, len));
+	return (ft_charconvert(i, sign, len));
 }
-
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	*c;
 
-	c = ft_itoa2(n);
+	c = ft_itoa(n);
 	if (c == NULL)
 		return ;
 	ft_putstr_fd(c, fd);
