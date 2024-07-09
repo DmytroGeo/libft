@@ -6,15 +6,15 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:37:13 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/09 15:23:52 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 18:27:19 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_min(size_t a, size_t b)
+size_t	ft_min(size_t a, int b)
 {
-	if (a > b && b >= 0)
+	if ((int)a > b && b >= 0)
 		return (b);
 	else
 		return (a);
