@@ -6,26 +6,48 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:37:13 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/25 19:26:46 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 15:23:52 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	ft_min(size_t a, size_t b)
+{
+	if (a > b && b >= 0)
+		return (b);
+	else
+		return (a);
+}
+
+size_t	ft_msize(size_t c, int d)
+{
+	if (d < 0)
+		return (1);
+	return (c);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	n;
+	size_t	min;
 
-	str = (char *)malloc((len + 1) * sizeof(char));
 	n = 0;
+	min = ft_min(len, ft_strlen(s) - start);
+	str = malloc(ft_msize(min + 1, ft_strlen(s) - start) * sizeof(char));
 	if (!str)
 		return (NULL);
-	while (n < len)
+	if (ft_strlen(s) > start)
 	{
-		str[n] = s[start + n];
-		n++;
+		while (n < min)
+		{
+			str[n] = s[start + n];
+			n++;
+		}
+		str[n] = '\0';
 	}
-	str[n] = '\0';
+	else
+		ft_bzero(str, 1);
 	return (str);
 }

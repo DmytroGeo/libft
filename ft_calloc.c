@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 18:34:38 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/06/28 10:53:13 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 13:56:07 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
+	if (size != 0 && ((SIZE_MAX) / size) < nmemb)
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	else if (size != 0 && ((SIZE_MAX) / size) < nmemb)
-		return (NULL);
-	else
-		ft_bzero(ptr, nmemb * size);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
