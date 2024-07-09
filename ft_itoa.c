@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:55:26 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/09 11:08:14 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/07/09 12:18:17 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ size_t	ft_nbrlen(int n)
 		return (ft_nbrlen((-1) * n));
 	else if (n == INT_MIN)
 		return (10);
-	else
-		return (0);
 	return (len);
 }
 
@@ -71,7 +69,7 @@ char	*ft_itoa(int n)
 	ptr = malloc((len + 1 + sign) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	if (n > 0)
+	if (n >= 0)
 		i = (unsigned int)n;
 	else if (n < 0 && n > INT_MIN)
 		i = (unsigned int)((-1) * n);
