@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dima <dima@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 16:13:36 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/15 15:17:37 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:06:50 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int	ft_lstsize(t_list *lst)
 {
+	// Arguments: t_list *lst – the linked list to count the elements of.
+	// Returns: The number of elements in the linked list.
+	// This function iterates through the linked list, counting the number of nodes until it reaches the end (NULL) and returns the total count.
 	int		count;
 	t_list	*current;
 

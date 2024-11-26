@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 14:09:40 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/09 10:03:23 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:54:43 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ int	ft_intconvert(const char *nptr)
 
 int	ft_atoi(const char *nptr)
 {
+	// Arguments: const char *nptr – the string to convert to an integer.
+	// Returns: The integer value of the string, considering optional leading whitespaces, signs, and numeric characters.
+	// This function converts a string to an integer, handling optional leading whitespaces, a '+' or '-' sign, and digits, using the helper function ft_intconvert for the actual conversion.
 	int		n;
 
 	n = 0;

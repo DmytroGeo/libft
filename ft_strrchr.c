@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:43:00 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/07/08 15:56:43 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:24:33 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	// Arguments: const char *s – the string to search in, int c – the character to search for.
+	// Returns: A pointer to the last occurrence of 'c' in 's', or NULL if 'c' is not found.
+	// This function searches for the last occurrence of character 'c' in the string 's'. If 'c' is the null character ('\0'), it returns a pointer to the end of the string.
 	char			*str;
 	unsigned char	uc;
 	int				n;
