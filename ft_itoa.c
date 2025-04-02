@@ -6,7 +6,7 @@
 /*   By: dgeorgiy <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 14:55:26 by dgeorgiy          #+#    #+#             */
-/*   Updated: 2024/11/26 14:59:35 by dgeorgiy         ###   ########.fr       */
+/*   Updated: 2025/04/02 13:27:40 by dgeorgiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ char	*ft_itoa(int n)
 	// Arguments: int n – the integer to convert.
 	// Returns: A string representing the integer, or NULL if memory allocation fails.
 	// This function allocates memory and converts the integer 'n' into its string representation, considering its sign, and uses 'ft_charconvert' to construct the string.
-	char			*ptr;
 	char			*ptr;
 	size_t			len;
 	size_t			sign;
